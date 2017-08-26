@@ -1,5 +1,5 @@
 # PISCES (Working Name)
-Personal Infograph Search Compute/Control Engine Solution
+Personal/Private Infograph Search Compute/Control Engine Solution
 Alternative name: IAK - I Already Know
 
 *Problem*: We already have good data that solves questions we have. It is sitting in our email, Nextcloud, RSS feed, Pocket, Evernote, Browser history, Reddit subs or other sources that search engines (i.e. Google) cannot see nor prioritize as being a validated/quality source of data for our search enquires.
@@ -9,11 +9,15 @@ Alternative name: IAK - I Already Know
 *Long Term Possibility*: Build a federated network of personal search engines that share public data indexes (i.e. websites, rss feeds, etc) to discover new sources, plus reduce the need for hundreds of personal search engines to crawl the same data, e.g. pisces.github.com would be seen as the authoritative indexer of (public) GitHub, allowing pre-indexed data to be included without the need to crawl the site, and that guy who is a guru in Python may have the best sources of info for Python docs and tutorials, so why not leverage that accumilate knowledge base?
 
 Proof of Concept Build Targets;
+ - Proposal of Weight/Relevence (can't use backrub as we assume *we* are king of sources - NLP + Training + ???)
  - System Architecure
- - Security, Privacy and Identity/Access 
- - Data Models
- - Meta, Markdown Language
+ - Security, Privacy and Identity/Access Models & Rules/Assumptions
+      - e.g. link to public webpage in an email - is the webpage 'public' (pre-indexed) in a federated model??
+      - NOTE: Assumption will always need to be private - explicit sharing only even if we go multi-user
+ - Data Models, Versioning(?)
+ - Context Detetction eg Code file, natural language, code snippet (quoted text) vs image meta-data plus headline vs body vs tags (or metadata &/or path eg. /data science/python/getting started.ppt vs /data science/R/getting started.ppt)
+ - Meta, Markdown Language - storage vs snippet
  - Query Language & boolean logic
  - Query Interface (CLI?)
- - Native Data Formats: PDF, Plain Text, HTML, +?
- - Plugins: IMAP, Pocket, Evernote, Local File Store, WebDAV?, +?
+ - Native Data Formats: PDF, Plain Text, HTML, +? (Dependent on Python Library Support Initially)
+ - Plugins: IMAP, Pocket, Evernote, Local File Store, RSS (OPML), WebDAV?, +? (Balance of crawl, pull & push)
